@@ -13,6 +13,7 @@ import Button from "@mui/material/Button";
 import ButtonGroup from "@mui/material/ButtonGroup";
 import { useNavigate } from "react-router-dom";
 import logo from  "../../src/logo192.png"
+import { toast } from "react-toastify";
 
 // const logo5121=require("../../public/logo512.png")
 
@@ -59,9 +60,8 @@ const Home = () => {
   }, [dispatch]);
 
   const handleDelete = (id) => {
-    if (window.confirm("Want to Delete")) {
-      dispatch(deleteUser(id));
-    }
+    dispatch(deleteUser(id));
+    toast.success("user deleted")
   };
 
   return (

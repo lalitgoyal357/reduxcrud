@@ -1,13 +1,18 @@
 import axios from "axios";
 import { GET_USER, DELETE_USER,ADD_USER, SINGLE_USER, EDIT_USER } from "./type";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+
 /// user npm run server command before start
 const getUsers = (users) => ({
   type: GET_USER,
   payload: users,
 });
 
-const userDelt = () => ({
+const userDelt = (id) => ({
   type: DELETE_USER,
+  payload: id,
 });
 
 const userAdd = () => ({
@@ -65,7 +70,13 @@ export const addUser = (user) => {
   return function (dispatch) {
     axios
       .post("http://localhost:3300/user",user)
-      .then((res) => {
+      .then(async(res) => {
+        toast.success('user Added', {
+          autoClose: 1000,
+          hideProgressBar: true,
+          position: 'top-center',
+        });
+
         // console.log("esponose",res.data)
         dispatch(userAdd());
         dispatch(loadUsers());

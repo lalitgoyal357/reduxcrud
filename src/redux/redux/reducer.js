@@ -24,7 +24,7 @@ const usersReducer = (state = initialstate, action) => {
         
     return {
         ...state,
-
+        item: state.users.filter((users)=>users.id != action.payload),
         loading: false,
       };
       case ADD_USER:
