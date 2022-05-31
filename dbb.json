@@ -1,0 +1,28 @@
+{
+  "user": [
+    {
+      "name": "3",
+      "email": "ajay@gmail.comasdfdsf",
+      "address": "jaipurasdfasdfd",
+      "id": 3
+    },
+    {
+      "name": "lalit",
+      "email": "lalit@gmail.com",
+      "id": "1",
+      "address": "banglore"
+    },
+    {
+      "name": "lalit",
+      "email": "kasdf",
+      "id": "2",
+      "address": "ladlalit"
+    },
+    {
+      "name": "dolly bansal",
+      "email": "lalit.@gmail.com",
+      "id": "7",
+      "address": "sgnr"
+    }
+  ]
+}
